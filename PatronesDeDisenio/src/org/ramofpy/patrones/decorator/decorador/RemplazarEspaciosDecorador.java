@@ -9,6 +9,6 @@ public class RemplazarEspaciosDecorador extends TextoDecorador{
 
     @Override
     public String darFormato() {
-        return texto.darFormato().replace(" ", "_");
+        return texto.darFormato().replace(" ", "-");
     }
 }

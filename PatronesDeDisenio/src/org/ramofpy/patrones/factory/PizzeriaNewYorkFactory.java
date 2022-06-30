@@ -7,6 +7,7 @@ import org.ramofpy.patrones.factory.producto.PizzaNewYorkVegetariana;
 public class PizzeriaNewYorkFactory extends PizzeriaZonaAbstractFactory {
     @Override
     PizzaProducto crearPizza(String tipo) {
+        //Desde Java 13 el switch se simplifica.
         return switch (tipo) {
             case "vegetariana" -> new PizzaNewYorkVegetariana();
             case "pepperoni" -> new PizzaNewYorkPepperoni();

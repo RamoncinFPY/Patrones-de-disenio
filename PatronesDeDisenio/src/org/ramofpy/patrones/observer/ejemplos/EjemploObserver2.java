@@ -4,11 +4,11 @@ import org.ramofpy.patrones.observer.UsuarioRepositorio;
 
 public class EjemploObserver2 {
     public static void main(String[] args) {
+
         UsuarioRepositorio repo = new UsuarioRepositorio();
-        repo.addObserver((o, u) -> System.out.println("Enviando un email al usuario " + u));
-        repo.addObserver((o, u) -> System.out.println("Enviando un email al administrador"));
-        repo.addObserver((o, u) -> System.out.println("Guardando info del usuario " +
-                u + " en el logs"));
-        repo.crearUsuario("Andrés");
+        repo.addObserver((o, usuario) -> System.out.println("Enviando un email al usuario " + usuario));
+        repo.addObserver((o, usuario) -> System.out.println("Enviando un email al administrador"));
+        repo.addObserver((o, usuario) -> System.out.println("Guardando info del usuario " + usuario + " en el logs"));
+        repo.crearUsuario("Ramón Francisco");
     }
 }

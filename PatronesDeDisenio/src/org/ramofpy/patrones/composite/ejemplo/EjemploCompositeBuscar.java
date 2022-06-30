@@ -27,5 +27,8 @@ public class EjemploCompositeBuscar {
 
         encontrado = doc.buscar("cv.docx");
         System.out.println("Encontrado cv.docx: "+ encontrado);
+
+        encontrado = doc.buscar("Ramón.docx");
+        System.out.println("Encontrado Ramón.docx: "+ encontrado);
     }
 }

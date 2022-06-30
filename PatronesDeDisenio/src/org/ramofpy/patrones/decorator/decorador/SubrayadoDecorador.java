@@ -12,8 +12,8 @@ public class SubrayadoDecorador extends TextoDecorador{
         int largo = texto.darFormato().length();
         StringBuilder sb = new StringBuilder(texto.darFormato());
         sb.append("\n");
-        for(int i = 0; i < largo;i++){
-            sb.append("_");
+        for(int i = 0; i <= largo; i++){
+            sb.append("-");
         }
         return sb.toString();
     }

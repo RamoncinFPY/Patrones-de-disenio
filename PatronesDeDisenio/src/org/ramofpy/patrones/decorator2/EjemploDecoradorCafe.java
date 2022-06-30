@@ -12,17 +12,17 @@ public class EjemploDecoradorCafe {
         ConChocolateDecorador conChoco = new ConChocolateDecorador(conLeche);
 
         System.out.println("El precio del cafe moca es: " + conChoco.getPrecioBase());
-        System.out.println("Los ingredientes: " + conChoco.getIngredientes());
+        System.out.println("Ingredientes: " + conChoco.getIngredientes());
 
         Configurable capuchino = new Cafe("Cafe Capuchino", 4);
         conCrema = new ConCremaDecorador(capuchino);
         conLeche = new ConLecheDecorador(conCrema);
         System.out.println("El precio del capuchino es: " + conLeche.getPrecioBase());
-        System.out.println("Los Ingredientes " + conLeche.getIngredientes());
+        System.out.println("Ingredientes: " + conLeche.getIngredientes());
 
         Configurable espresso = new Cafe("Cafe Espresso", 3);
         System.out.println("El precio del cafe Espresso es " + espresso.getPrecioBase());
-        System.out.println("Los ingredientes del cafe Espresso es: " + espresso.getIngredientes());
+        System.out.println("Ingredientes: " + espresso.getIngredientes());
 
     }
 }

@@ -11,13 +11,14 @@ public class EjemploComposite {
 
         java.addComponente(new Archivo("patron-composite.docx"));
         Directorio stream = new Directorio("Api Stream");
-        stream.addComponente(new Archivo("stream-map.docx"));
+        stream.addComponente(new Archivo("stream-map.pdf"));
 
         java.addComponente(stream);
 
         doc.addComponente(java);
         doc.addComponente(new Archivo("cv.docx"));
         doc.addComponente(new Archivo("logo.jpeg"));
+        doc.addComponente(new Archivo("gitHub.git"));
 
         System.out.println(doc.mostrar(0));
     }

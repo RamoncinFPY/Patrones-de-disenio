@@ -37,11 +37,26 @@ public class Directorio extends Componente{
         return sb.toString();
     }
 
+    /*
     @Override
     public boolean buscar(String nombre) {
         if(this.nombre.equalsIgnoreCase(nombre)){
             return true;
         }
-        return hijos.stream().anyMatch(h -> h.buscar(nombre));
+        for (Componente hijo: this.hijos) {
+            if (hijo.buscar(nombre)) {
+                return true;
+            }
+        }
+        return false;
+    }
+     */
+
+    @Override
+    public boolean buscar(String nombre) {
+        if(this.nombre.equalsIgnoreCase(nombre)){
+            return true;
+        }
+        return hijos.stream().anyMatch(hijo -> hijo.buscar(nombre));
     }
 }
